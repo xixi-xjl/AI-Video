@@ -8,9 +8,9 @@
 
 | 环境 | 地址 | 说明 |
 |------|------|------|
-| 用户端 | https://xixi498575681.xyz | 视频解析、下载、AI 总结 |
-| 管理后台 | https://xixi498575681.xyz/admin | 用户/订单/总结管理 |
-| API 文档 | https://xixi498575681.xyz/api/docs | FastAPI Swagger |
+| 用户端 | http://xixi498575681.xyz | 视频解析、下载、AI 总结 |
+| 管理后台 | http://xixi498575681.xyz/admin | 用户/订单/总结管理 |
+| API 文档 | http://xixi498575681.xyz/api/docs | FastAPI Swagger |
 
 **本地开发地址**
 
