@@ -4,13 +4,13 @@
 
 ---
 
-## 在线演示（部署后填写）
+## 在线演示
 
 | 环境 | 地址 | 说明 |
 |------|------|------|
-| 用户端 | `https://yourdomain.com` | 视频解析、下载、AI 总结 |
-| 管理后台 | `https://yourdomain.com/admin` | 用户/订单/总结管理 |
-| API 文档 | `https://yourdomain.com/api/docs` 或 `https://api.yourdomain.com/docs` | FastAPI Swagger |
+| 用户端 | https://xixi498575681.xyz | 视频解析、下载、AI 总结 |
+| 管理后台 | https://xixi498575681.xyz/admin | 用户/订单/总结管理 |
+| API 文档 | https://xixi498575681.xyz/api/docs | FastAPI Swagger |
 
 **本地开发地址**
 
@@ -236,13 +236,11 @@ npm run dev             # → http://localhost:5173
 |----|------|
 | `DEEPSEEK_API_KEY` | 必填 |
 | `JWT_SECRET` | 使用 `openssl rand -hex 32` 生成强密钥 |
-| `FRONTEND_URL` | 改为 `https://yourdomain.com` |
+| `FRONTEND_URL` | 生产环境设为 `https://xixi498575681.xyz` |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | 修改为强密码 |
 | CORS | 生产环境将 `main.py` 中 `allow_origins` 改为你的域名 |
 | 前端构建 | `cd frontend && npm run build`，Nginx 托管 `dist/` |
-| Stripe | 生产用 `sk_live_` 密钥，Webhook 指向 `/api/payment/webhook` |
-
-部署完成后，将本文档顶部「在线演示」表格中的 `yourdomain.com` 替换为实际域名。
+| Stripe | 生产用 `sk_live_` 密钥，Webhook 指向 `https://xixi498575681.xyz/api/payment/webhook` |
 
 ---
 

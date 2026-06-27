@@ -24,8 +24,20 @@ class VideoDownloader:
 
     def __init__(self):
         os.makedirs(self.DOWNLOAD_DIR, exist_ok=True)
-        self.ffmpeg_path = _find_ffmpeg_path()
-        self.has_ffmpeg = self.ffmpeg_path is not None
+        self._ffmpeg_path: Optional[str] = None
+        self._ffmpeg_resolved = False
+
+    @property
+    def ffmpeg_path(self) -> Optional[str]:
+        """首次使用时再查找 ffmpeg，避免启动时从 GitHub 下载阻塞服务。"""
+        if not self._ffmpeg_resolved:
+            self._ffmpeg_path = _find_ffmpeg_path()
+            self._ffmpeg_resolved = True
+        return self._ffmpeg_path
+
+    @property
+    def has_ffmpeg(self) -> bool:
+        return self.ffmpeg_path is not None
 
     @staticmethod
     def _sanitize_filename(name: str) -> str:
